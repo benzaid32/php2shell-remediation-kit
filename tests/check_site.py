@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static checks for the business landing page."""
+"""Static checks for the business pages."""
 
 from html.parser import HTMLParser
 from pathlib import Path
@@ -7,7 +7,6 @@ import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
-INDEX = DOCS / "index.html"
 
 
 class SiteParser(HTMLParser):
@@ -57,12 +56,8 @@ class SiteParser(HTMLParser):
             self.title.append(data)
 
 
-def main():
-    if not INDEX.exists():
-        print(f"FAIL: missing {INDEX}")
-        return 1
-
-    html = INDEX.read_text(encoding="utf-8")
+def check_file(path):
+    html = path.read_text(encoding="utf-8")
     parser = SiteParser()
     parser.feed(html)
     errors = []
@@ -101,18 +96,35 @@ def main():
         elif control_id not in parser.labels:
             errors.append(f"form control without label: {control_id}")
 
-    if errors:
-        for error in errors:
-            print(f"FAIL: {error}")
+    return parser, checked_assets, errors
+
+
+def main():
+    pages = sorted(DOCS.glob("*.html"))
+    if not pages:
+        print(f"FAIL: no HTML pages found in {DOCS}")
         return 1
 
-    print(
-        "Site checks passed: "
-        f"{len(checked_assets)} local assets, "
-        f"{len(parser.anchors)} anchors, "
-        f"{len(parser.ids)} ids, "
-        f"{len(parser.controls)} form controls"
-    )
+    failed = False
+    for page in pages:
+        parser, assets, errors = check_file(page)
+        if errors:
+            failed = True
+            for error in errors:
+                print(f"FAIL: {page.name}: {error}")
+        else:
+            print(
+                f"ok: {page.name}: "
+                f"{len(assets)} assets, "
+                f"{len(parser.anchors)} anchors, "
+                f"{len(parser.ids)} ids, "
+                f"{len(parser.controls)} form controls"
+            )
+
+    if failed:
+        return 1
+
+    print(f"Site checks passed for {len(pages)} page(s)")
     return 0
 
 

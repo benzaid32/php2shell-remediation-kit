@@ -37,6 +37,7 @@ A `.nojekyll` file is included so static assets are served as-is.
 
 ## Privacy and compliance
 
+- The page includes `privacy.html`; review it with counsel and update the processor/retention details before collecting submissions.
 - If you enable `formEndpoint`, add a privacy notice that names the processor and retention period.
 - Do not collect passwords, tokens, customer data, or third-party host details.
 - Keep the “written scope before access” statement visible.

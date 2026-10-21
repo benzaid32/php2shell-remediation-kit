@@ -43,10 +43,17 @@ Windows users can run `scripts/audit-local.ps1` in PowerShell.
 | [`templates/customer-notice.md`](templates/customer-notice.md) | Customer-facing notification template |
 | [`templates/patch-record.md`](templates/patch-record.md) | Change/evidence record template |
 | [`docs/index.html`](docs/index.html) | Business landing page for the paid verification/remediation offer |
+| [`docs/privacy.html`](docs/privacy.html) | Privacy notice for the contact form and enquiries |
 | [`docs/config.js`](docs/config.js) | Contact, booking, and form-endpoint settings for the page |
 | [`docs/index.md`](docs/index.md) | Short documentation landing page |
 | [`docs/launch-post.md`](docs/launch-post.md) | Launch post draft for a blog, newsletter, or LinkedIn |
 | [`tests/check_site.py`](tests/check_site.py) | Static checks for the business page |
+| [`outreach/README.md`](outreach/README.md) | Compliant outreach rules, cadence, and boundaries |
+| [`outreach/lead-research.md`](outreach/lead-research.md) | Public-signal lead research and qualification |
+| [`outreach/email-sequences.md`](outreach/email-sequences.md) | B2B email sequences for agencies, MSPs, and SMEs |
+| [`outreach/proposal-and-scope.md`](outreach/proposal-and-scope.md) | Proposal, scope, authorisation, and change-order templates |
+| [`outreach/discovery-questions.md`](outreach/discovery-questions.md) | Triage-call questions and red flags |
+| [`outreach/leads-template.csv`](outreach/leads-template.csv) | CRM import template |
 
 ---
 
@@ -58,6 +65,20 @@ Windows users can run `scripts/audit-local.ps1` in PowerShell.
 - Sysadmins who need a defensible patch-verification record
 
 It is **not** a penetration-testing toolkit and must not be used to probe systems without written authorization.
+
+---
+
+## Business playbook
+
+The landing page is the front door. The outreach pack is the go-to-market system:
+
+1. Read [`outreach/README.md`](outreach/README.md) for the rules and weekly cadence.
+2. Build a list from **public PHP signals** using [`outreach/lead-research.md`](outreach/lead-research.md).
+3. Use the B2B sequences in [`outreach/email-sequences.md`](outreach/email-sequences.md).
+4. Qualify on the triage call with [`outreach/discovery-questions.md`](outreach/discovery-questions.md).
+5. Send a one-page scope from [`outreach/proposal-and-scope.md`](outreach/proposal-and-scope.md).
+
+**Boundary:** we do **not** scan, probe, fuzz, or exploit third-party systems, and we do **not** tell a company it is vulnerable without written authorization and evidence. The free kit lets a company check its own host. Paid work starts after a signed scope.
 
 ---
 

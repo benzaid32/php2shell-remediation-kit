@@ -33,6 +33,9 @@ jobs:
       - name: Deterministic audit tests
         run: bash tests/test-audit.sh
 
+      - name: Static site checks
+        run: python3 tests/check_site.py
+
   powershell:
     name: PowerShell parse
     runs-on: windows-latest

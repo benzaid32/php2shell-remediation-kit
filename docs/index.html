@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PHP2Shell Response — independent PHP patch verification for SMEs</title>
+  <meta name="description" content="Independent PHP patch verification and remediation for SMEs, agencies, and MSPs. Verify CVE-2026-109618 and CVE-2026-109619 fixes, review effective web configuration, and get evidence-backed reporting.">
+  <meta name="theme-color" content="#07111f">
+  <link rel="canonical" href="https://benzaid32.github.io/php2shell-remediation-kit/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PHP2Shell Response — prove your PHP is patched">
+  <meta property="og:description" content="Free self-audit kit. Paid patch verification and remediation for SMEs, agencies, and MSPs. Written scope before access. No unauthorized scanning.">
+  <meta property="og:url" content="https://benzaid32.github.io/php2shell-remediation-kit/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PHP2Shell Response — prove your PHP is patched">
+  <meta name="twitter:description" content="Free self-audit kit. Paid patch verification and remediation for SMEs, agencies, and MSPs.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "PHP2Shell Response",
+    "description": "Independent PHP patch verification and remediation for SMEs, agencies, and MSPs.",
+    "url": "https://benzaid32.github.io/php2shell-remediation-kit/",
+    "areaServed": "Worldwide",
+    "serviceType": [
+      "PHP security remediation",
+      "Patch verification",
+      "Incident response"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="PHP2Shell Response home">
+        <span class="brand-mark" aria-hidden="true">P2S</span>
+        <span class="brand-name">PHP2Shell <span>Response</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#offer">Offer</a>
+        <a href="#process">Process</a>
+        <a href="#proof">Deliverables</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#contact" data-booking>Book a triage</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> CVE-2026-109618 &middot; CVE-2026-109619 &middot; CVSS 9.2</div>
+          <h1>Your PHP is patched.<br><span class="accent">Can you prove it?</span></h1>
+          <p class="lede">
+            Two critical PHP remote-code-execution flaws are public. Fixed releases exist, but
+            &ldquo;we updated PHP&rdquo; is not evidence. We help SMEs, agencies, and MSPs inventory every
+            PHP runtime, verify the patch that actually matters, harden the risky paths, and
+            produce a report your board and customers can understand.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact" data-booking>Book a 20-minute triage</a>
+            <a class="btn btn-ghost" href="https://github.com/benzaid32/php2shell-remediation-kit" target="_blank" rel="noopener">Get the free kit</a>
+          </div>
+          <ul class="hero-points">
+            <li>Read-only by design</li>
+            <li>Written scope before access</li>
+            <li>Evidence your board can read</li>
+          </ul>
+        </div>
+
+        <aside class="hero-card" aria-label="Illustrative local audit output">
+          <div class="card-top">
+            <span>Local audit &middot; sample</span>
+            <span class="badge badge-warn">Action required</span>
+          </div>
+          <div class="terminal">
+            <div class="terminal-bar" aria-hidden="true">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <pre><code>$ bash scripts/audit-local.sh
+
+PHP 8.3.6
+  status: <span class="fail">POTENTIALLY_VULNERABLE</span>
+Apache mod_php: DETECTED
+  web INI memory_limit = 128M      <span class="warn">WARN</span>
+  session.upload_progress = On     <span class="warn">WARN</span>
+
+Summary
+  <span class="fail">Potential CVE exposure detected.</span></code></pre>
+          </div>
+          <p class="micro">Illustrative output from the free read-only kit. Run it on a host you own or are authorized to administer.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="alert-strip" aria-label="Fixed PHP versions">
+      <div class="wrap alert-inner">
+        <span class="alert-label">Fixed releases</span>
+        <span class="pill">8.5.12</span>
+        <span class="pill">8.4.27</span>
+        <span class="pill">8.3.36</span>
+        <span class="pill">8.2.35</span>
+        <a class="alert-link" href="https://github.com/benzaid32/php2shell-remediation-kit/blob/main/CHECKLIST.md" target="_blank" rel="noopener">Remediation checklist &rarr;</a>
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">The gap</p>
+          <h2>The patch is the easy part. <span class="muted">Proving it is the work.</span></h2>
+          <p class="section-lede">
+            Most teams can run an update. Few can show which PHP runtime is actually serving traffic,
+            whether a distro backport is real, and whether the web SAPI is still one config change away
+            from the vulnerable path.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">01</div>
+            <h3>PHP is not WordPress</h3>
+            <p>Updating WordPress, plugins, or themes does not update the PHP runtime underneath. The bug is in PHP itself.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">02</div>
+            <h3>Version strings can lie</h3>
+            <p>Distributions backport fixes without changing the upstream version. <code>php -v</code> alone is not patch evidence.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">03</div>
+            <h3>The web SAPI is a different config</h3>
+            <p><code>memory_limit=-1</code> in CLI does not mean Apache or FPM is safe. Effective values live in pools, vhosts, and per-directory overrides.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">04</div>
+            <h3>Containers hide old runtimes</h3>
+            <p>Restarting an old image keeps the old PHP inside it. Rebuild from a patched base and verify the final image, not the compose file.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="offer">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Services</p>
+          <h2>Pick the level of proof you need.</h2>
+          <p class="section-lede">Start free. Upgrade to an independent verification or a full remediation sprint. Every paid engagement starts with a written scope.</p>
+        </div>
+
+        <div class="pricing">
+          <article class="price-card">
+            <div class="price-top">
+              <h3>Free self-audit</h3>
+              <p class="price">$0</p>
+            </div>
+            <p class="price-desc">For teams that want to check a host themselves and bring the evidence to their own team.</p>
+            <ul class="checklist">
+              <li>Linux and Windows read-only audit</li>
+              <li>PHP runtime and SAPI inventory</li>
+              <li>Patch checklist and executive briefing</li>
+              <li>No account required</li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="https://github.com/benzaid32/php2shell-remediation-kit" target="_blank" rel="noopener">Get the free kit</a>
+          </article>
+
+          <article class="price-card">
+            <div class="price-top">
+              <h3>Patch verification</h3>
+              <p class="price"><small>from</small> $1,500</p>
+            </div>
+            <p class="price-desc">For teams that have patched and need independent evidence before they close the change.</p>
+            <ul class="checklist">
+              <li>Up to 5 PHP hosts</li>
+              <li>CLI, web SAPI, and effective config review</li>
+              <li>Vendor backport confirmation</li>
+              <li>Evidence report and 45-minute review</li>
+              <li>2 business days</li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="#contact" data-booking>Request verification</a>
+          </article>
+
+          <article class="price-card featured">
+            <div class="tag">Most requested</div>
+            <div class="price-top">
+              <h3>Remediation sprint</h3>
+              <p class="price"><small>from</small> $4,500</p>
+            </div>
+            <p class="price-desc">For teams that need the inventory, patch, verification, and evidence pack handled end-to-end.</p>
+            <ul class="checklist">
+              <li>Up to 15 PHP hosts</li>
+              <li>Inventory and exposure prioritisation</li>
+              <li>Patch and vendor coordination</li>
+              <li>Interim hardening if patching slips</li>
+              <li>Verification, smoke test, and patch record</li>
+              <li>5 business days</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="#contact" data-booking>Book a triage</a>
+          </article>
+
+          <article class="price-card">
+            <div class="price-top">
+              <h3>MSP / agency retainer</h3>
+              <p class="price"><small>from</small> $2,500<small>/mo</small></p>
+            </div>
+            <p class="price-desc">For firms managing many client sites that need repeatable patch evidence and a fast escalation path.</p>
+            <ul class="checklist">
+              <li>Monthly verification across client hosts</li>
+              <li>White-label evidence reports</li>
+              <li>Priority triage for new PHP advisories</li>
+              <li>Up to 25 client hosts</li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="#contact" data-booking>Talk about a retainer</a>
+          </article>
+        </div>
+
+        <p class="pricing-note">Starting prices for scoping. Final quote depends on host count, access, urgency, and whether incident response is required. No testing begins without a written scope.</p>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">How it works</p>
+          <h2>Five steps. No surprises.</h2>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span class="step-num" aria-hidden="true">01</span>
+            <div>
+              <h3>20-minute triage</h3>
+              <p>We confirm what you run, how many PHP hosts are involved, and whether you need verification, remediation, or incident response.</p>
+            </div>
+          </article>
+          <article class="step">
+            <span class="step-num" aria-hidden="true">02</span>
+            <div>
+              <h3>Written scope and authorisation</h3>
+              <p>You name the hosts and approve the exact actions. No access, probing, or testing happens before the scope is signed.</p>
+            </div>
+          </article>
+          <article class="step">
+            <span class="step-num" aria-hidden="true">03</span>
+            <div>
+              <h3>Evidence collection</h3>
+              <p>You run the read-only scripts or provide approved access. We map CLI, web SAPI, FPM pools, containers, packages, and vendor advisories.</p>
+            </div>
+          </article>
+          <article class="step">
+            <span class="step-num" aria-hidden="true">04</span>
+            <div>
+              <h3>Patch, restart, verify</h3>
+              <p>We coordinate with your host or vendor, restart workers, clear OPcache, and confirm the effective runtime and configuration that serves traffic.</p>
+            </div>
+          </article>
+          <article class="step">
+            <span class="step-num" aria-hidden="true">05</span>
+            <div>
+              <h3>Report and sign-off</h3>
+              <p>You get an executive summary, technical evidence, residual risk, and a 30-day recheck reminder. Your change record gets a defensible close.</p>
+            </div>
+          </article>
+        </div>
+        <div class="scope-note">
+          <strong>Scope first.</strong> We do not scan, probe, or test a system until you sign a written authorisation that names the hosts and allowed actions. We do not send cold emails claiming a site is vulnerable.
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="proof">
+      <div class="wrap proof-grid">
+        <div>
+          <p class="kicker">What you get</p>
+          <h2>Evidence, not guesswork.</h2>
+          <p class="section-lede">The deliverable is written for two audiences: the person who has to sign off, and the person who has to defend the change.</p>
+          <ul class="checklist">
+            <li>Asset inventory with PHP branches, SAPIs, and container images</li>
+            <li>Patch matrix mapped to vendor advisories and package versions</li>
+            <li>Effective web configuration review, not just CLI defaults</li>
+            <li>Verification commands, outputs, timestamps, and reviewer notes</li>
+            <li>Executive summary plus technical appendix</li>
+            <li>Residual risk and a 30-day recheck reminder</li>
+          </ul>
+        </div>
+        <div class="report-card">
+          <div class="report-top">
+            <span>Verification summary &middot; sample</span>
+            <span class="badge badge-ok">Evidence attached</span>
+          </div>
+          <dl>
+            <div><dt>Asset</dt><dd>example.com &middot; web-01</dd></div>
+            <div><dt>Runtime</dt><dd>PHP 8.3.36</dd></div>
+            <div><dt>Web SAPI</dt><dd>Apache mod_php</dd></div>
+            <div><dt>Vendor package</dt><dd>Ubuntu 8.3.36-0ubuntu0.24.04</dd></div>
+            <div><dt>Effective memory limit</dt><dd>-1 (administrative)</dd></div>
+            <div><dt>Upload progress</dt><dd>Off</dd></div>
+            <div><dt>Smoke test</dt><dd>Passed</dd></div>
+            <div><dt>Reviewer</dt><dd>Independent verification</dd></div>
+          </dl>
+          <p class="micro">Illustrative structure only. Findings depend on the authorised scope and the evidence collected.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap faq-grid">
+        <div class="section-head">
+          <p class="kicker">FAQ</p>
+          <h2>Straight answers.</h2>
+          <p class="section-lede">If your question is not here, ask it in the triage call. We will tell you if we are not the right fit.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Do you scan our website?</summary>
+            <p>No. We work on hosts you own or are explicitly authorised to administer. The free scripts are read-only and run locally. Paid engagements start with a written scope that names the hosts and allowed actions.</p>
+          </details>
+          <details>
+            <summary>We already patched PHP. Why verify?</summary>
+            <p>Because the version string is not the whole story. The web SAPI can use a different INI file, a distro may have backported the fix without changing the upstream version, and a container may still run an old image. Verification ties the evidence to the runtime that actually serves traffic.</p>
+          </details>
+          <details>
+            <summary>Is this a WordPress issue?</summary>
+            <p>No. WordPress runs on PHP, but the vulnerability is in PHP itself. Updating WordPress, themes, or plugins does not patch the PHP runtime.</p>
+          </details>
+          <details>
+            <summary>Does a WAF fix it?</summary>
+            <p>No. A WAF can reduce some attack paths and buy time, but it is not a complete fix. The only full remediation is a patched PHP runtime.</p>
+          </details>
+          <details>
+            <summary>What if we suspect a compromise?</summary>
+            <p>Treat it as an incident: isolate the host, preserve evidence, rotate credentials, and rebuild from a known-good image. We can scope incident response separately; do not wait for a sales call to take containment steps.</p>
+          </details>
+          <details>
+            <summary>How do you handle sensitive data?</summary>
+            <p>We minimise collection, use read-only evidence where possible, and never ask for passwords in the contact form. A paid engagement includes a written scope, confidentiality terms, and a data-handling agreement before access.</p>
+          </details>
+          <details>
+            <summary>Do you work with agencies and MSPs?</summary>
+            <p>Yes. The retainer is built for firms managing multiple client sites. We can produce white-label evidence reports and act as a priority escalation path for new PHP advisories.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="kicker">Start here</p>
+          <h2>Tell us what you run.</h2>
+          <p class="section-lede">We will reply within one business day with the right next step: free self-audit, verification, remediation sprint, or incident triage.</p>
+          <ul class="contact-points">
+            <li>Name the PHP versions, SAPIs, and control panels you know about.</li>
+            <li>Tell us if you have a patch deadline or a customer commitment.</li>
+            <li>Do not include passwords, tokens, or customer data.</li>
+          </ul>
+          <p class="contact-direct">Prefer email? <a href="#contact" data-contact-email>Contact channel being configured</a></p>
+        </div>
+
+        <form id="scope-form" class="form" action="#" method="post">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Work email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" autocomplete="organization" required>
+            </div>
+            <div class="field">
+              <label for="website">Website</label>
+              <input id="website" name="website" type="url" placeholder="https://" autocomplete="url">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="hosts">PHP hosts</label>
+              <select id="hosts" name="hosts" required>
+                <option value="" selected disabled>Select one</option>
+                <option value="1-5">1&ndash;5</option>
+                <option value="6-15">6&ndash;15</option>
+                <option value="16-50">16&ndash;50</option>
+                <option value="50+">50+</option>
+                <option value="not-sure">Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="timeline">Timeline</label>
+              <select id="timeline" name="timeline" required>
+                <option value="" selected disabled>Select one</option>
+                <option value="today">Today / this week</option>
+                <option value="1-2-weeks">1&ndash;2 weeks</option>
+                <option value="this-month">This month</option>
+                <option value="planning">Planning / next quarter</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">What are you running?</label>
+            <textarea id="message" name="message" rows="4" placeholder="WordPress, Laravel, custom PHP, containers, cPanel/Plesk, cloud host..."></textarea>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" name="consent" value="yes" required>
+            <span>I confirm I am authorised to request this work and understand that no testing or access will begin without a written scope.</span>
+          </label>
+          <button class="btn btn-primary btn-block" type="submit">Request a scope call</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          <p class="form-note">Never include passwords, tokens, customer data, or third-party host details. We will reply within one business day.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="brand brand-footer" href="#top" aria-label="PHP2Shell Response home">
+          <span class="brand-mark" aria-hidden="true">P2S</span>
+          <span class="brand-name">PHP2Shell <span>Response</span></span>
+        </a>
+        <p>Independent PHP remediation and patch verification for SMEs, agencies, and MSPs. Free kit, paid proof.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/benzaid32/php2shell-remediation-kit" target="_blank" rel="noopener">Free kit</a>
+        <a href="https://github.com/benzaid32/php2shell-remediation-kit/blob/main/CHECKLIST.md" target="_blank" rel="noopener">Checklist</a>
+        <a href="https://github.com/benzaid32/php2shell-remediation-kit/blob/main/BRIEFING.md" target="_blank" rel="noopener">Executive briefing</a>
+        <a href="https://github.com/benzaid32/php2shell-remediation-kit/blob/main/SOURCES.md" target="_blank" rel="noopener">Sources</a>
+        <a href="https://github.com/benzaid32/php2shell-remediation-kit/blob/main/SECURITY.md" target="_blank" rel="noopener">Security</a>
+      </div>
+    </div>
+    <div class="wrap footer-legal">
+      <p>PHP2Shell Response is independent and not affiliated with the PHP project, the CVE assigners, or watchTowr. &ldquo;PHP2Shell&rdquo; is used descriptively. The free kit is provided as-is under the MIT license. We do not scan or test systems without written authorisation.</p>
+      <p>&copy; <span id="year">2026</span> PHP2Shell Response. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -8,6 +8,9 @@ A vendor-neutral, **local-only** remediation kit for the October 2026 PHP remote
 
 > **Not affiliated with the PHP project.** This is a community remediation kit. It contains **no exploit code** and performs **no scanning of third-party systems**. Use it only on hosts you own or are explicitly authorized to administer.
 
+**Business page:** https://benzaid32.github.io/php2shell-remediation-kit/  
+**Free kit:** this repository. **Paid verification:** see the page for scope and pricing.
+
 ---
 
 ## TL;DR
@@ -39,7 +42,11 @@ Windows users can run `scripts/audit-local.ps1` in PowerShell.
 | [`scripts/verify-patch.sh`](scripts/verify-patch.sh) | Post-patch verification wrapper |
 | [`templates/customer-notice.md`](templates/customer-notice.md) | Customer-facing notification template |
 | [`templates/patch-record.md`](templates/patch-record.md) | Change/evidence record template |
-| [`docs/index.md`](docs/index.md) | Short landing page suitable for GitHub Pages |
+| [`docs/index.html`](docs/index.html) | Business landing page for the paid verification/remediation offer |
+| [`docs/config.js`](docs/config.js) | Contact, booking, and form-endpoint settings for the page |
+| [`docs/index.md`](docs/index.md) | Short documentation landing page |
+| [`docs/launch-post.md`](docs/launch-post.md) | Launch post draft for a blog, newsletter, or LinkedIn |
+| [`tests/check_site.py`](tests/check_site.py) | Static checks for the business page |
 
 ---
 

@@ -1,0 +1,18 @@
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local reports and secrets
+*.log
+inventory-*.txt
+php-inventory-*.txt
+.env
+.env.*
+*.pem
+*.key
+
+# Editor
+.vscode/
+.idea/
+*.swp

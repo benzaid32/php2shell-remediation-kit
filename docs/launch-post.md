@@ -64,7 +64,7 @@ It contains no exploit code and performs no scanning of third-party systems.
 
 Patch PHP this week. If you cannot, apply the interim controls and document the residual risk. If you suspect compromise, treat it as an incident: preserve evidence, rotate credentials, and rebuild from a known-good image.
 
-If you need a second pair of eyes on your inventory or patch verification, [add your contact/CTA here].
+If you need a second pair of eyes on your inventory or patch verification, [book a 20-minute triage](https://benzaid32.github.io/php2shell-remediation-kit/#contact) or start with the free kit.
 
 ---
 
@@ -76,4 +76,4 @@ If you need a second pair of eyes on your inventory or patch verification, [add 
 >
 > Patch to PHP 8.5.12 / 8.4.27 / 8.3.36 / 8.2.35, then verify the web SAPI.
 >
-> https://github.com/benzaid32/php2shell-remediation-kit
+> Free kit + paid verification: https://benzaid32.github.io/php2shell-remediation-kit/

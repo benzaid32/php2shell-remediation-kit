@@ -182,6 +182,16 @@ section[id] {
   align-items: center;
 }
 
+.hero-grid > *,
+.grid-2 > *,
+.pricing > *,
+.proof-grid > *,
+.faq-grid > *,
+.contact-grid > *,
+.footer-grid > * {
+  min-width: 0;
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -1040,6 +1050,19 @@ textarea {
     display: none;
   }
 
+  .nav {
+    gap: 0.5rem;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+  }
+
+  .nav-cta {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
   .grid-2,
   .pricing {
     grid-template-columns: 1fr;
@@ -1060,6 +1083,11 @@ textarea {
 
   .price-desc {
     min-height: 0;
+  }
+
+  .terminal pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
   }
 }
 

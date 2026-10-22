@@ -74,6 +74,7 @@ Rules:
 - **Do not buy email lists.** They are usually stale, non-compliant, and bad for deliverability.
 - **Use role-based addresses** (`hello@`, `info@`, `security@`) or a public contact form. Do not guess personal addresses.
 - **Include a real opt-out** and honour it immediately. Keep a suppression list.
+- **Identify the message as commercial.** Include the business name and a clear solicitation line in the footer.
 - **No deceptive subject lines**, fake “Re:”/“Fwd:”, fake urgency, or false vulnerability claims.
 - **No attachments** on first contact.
 - **Use a separate sending domain or subdomain** (for example `outreach.yourdomain.com`), warmed up slowly. Do not risk your primary domain.
@@ -111,7 +112,7 @@ A reasonable early target is **100 well-researched contacts → 8–15 replies �
 - [ ] The first line references a real public signal and source URL.
 - [ ] The email contains no vulnerability claim.
 - [ ] The CTA is the free kit or a 20-minute triage, not “buy now.”
-- [ ] The footer has the legal entity, address, privacy link, and opt-out.
+- [ ] The footer identifies the message as a commercial solicitation and has the legal entity, address, privacy link, and opt-out.
 - [ ] The lead is not on the suppression list.
 - [ ] The sending domain has SPF, DKIM, and DMARC.
 - [ ] You can answer “where did you get my email?” in one sentence.

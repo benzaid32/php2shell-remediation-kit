@@ -10,6 +10,7 @@ Replace every `{{placeholder}}`. If you are a sole operator with no legal entity
 
 - Plain text. No images, tracking pixels, or attachments on first contact.
 - Keep the commercial identification line, business name, postal address, and opt-out in the footer. Do not remove them to make the email look personal.
+- If you are a solo operator, replace “we” with “I” and use your full legal name in the footer.
 - One primary link in the first email. The footer may include a privacy link.
 - 80–140 words. If it is longer, cut it.
 - No “you are vulnerable”, “urgent”, “final notice”, or fake “Re:”.

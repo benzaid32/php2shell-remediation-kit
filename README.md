@@ -53,6 +53,7 @@ Windows users can run `scripts/audit-local.ps1` in PowerShell.
 | [`outreach/email-sequences.md`](outreach/email-sequences.md) | B2B email sequences for agencies, MSPs, and SMEs |
 | [`outreach/proposal-and-scope.md`](outreach/proposal-and-scope.md) | Proposal, scope, authorisation, and change-order templates |
 | [`outreach/discovery-questions.md`](outreach/discovery-questions.md) | Triage-call questions and red flags |
+| [`outreach/launch-checklist.md`](outreach/launch-checklist.md) | Pre-launch checklist for identity, deliverability, and first pipeline |
 | [`outreach/leads-template.csv`](outreach/leads-template.csv) | CRM import template |
 
 ---
@@ -77,6 +78,7 @@ The landing page is the front door. The outreach pack is the go-to-market system
 3. Use the B2B sequences in [`outreach/email-sequences.md`](outreach/email-sequences.md).
 4. Qualify on the triage call with [`outreach/discovery-questions.md`](outreach/discovery-questions.md).
 5. Send a one-page scope from [`outreach/proposal-and-scope.md`](outreach/proposal-and-scope.md).
+6. Run the pre-launch checks in [`outreach/launch-checklist.md`](outreach/launch-checklist.md) before sending.
 
 **Boundary:** we do **not** scan, probe, fuzz, or exploit third-party systems, and we do **not** tell a company it is vulnerable without written authorization and evidence. The free kit lets a company check its own host. Paid work starts after a signed scope.
 

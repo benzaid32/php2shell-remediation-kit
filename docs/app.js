@@ -77,7 +77,7 @@
       return;
     }
 
-    var subject = "PHP2Shell scope request — " + (data.company || "New enquiry");
+    var subject = "PHP patch verification request — " + (data.company || "New enquiry");
     var body = [
       "Name: " + (data.name || ""),
       "Work email: " + (data.email || ""),

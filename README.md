@@ -9,6 +9,7 @@ A vendor-neutral, **local-only** remediation kit for the October 2026 PHP remote
 > **Not affiliated with the PHP project.** This is a community remediation kit. It contains **no exploit code** and performs **no scanning of third-party systems**. Use it only on hosts you own or are explicitly authorized to administer.
 
 **Business page:** https://benzaid32.github.io/php2shell-remediation-kit/  
+**Maintained by:** [Said Bendlala](https://benzaid.vercel.app/), software engineer in Morocco.  
 **Free kit:** this repository. **Paid verification:** see the page for scope and pricing.
 
 ---

@@ -2,21 +2,21 @@
 
 Use this before you send a single outreach email. The page can be live without every item, but the outreach cannot.
 
-## 1. Business identity
+## 1. Operator identity
 
-- [ ] Choose the trading name you will use on invoices and email.
-- [ ] Register the domain (or decide to use a subdomain you already own).
-- [ ] Create a monitored mailbox: `hello@`, `security@`, or `contact@`.
-- [ ] Add the legal entity name and physical postal address to the email footer. CAN-SPAM requires a real address.
+- [ ] Decide whether to use your personal name or a descriptive service name. Do not invent a legal entity.
+- [ ] Register a domain (or use a monitored inbox you already own).
+- [ ] Create or confirm a monitored mailbox: `hello@`, `security@`, `contact@`, or your published personal inbox.
+- [ ] Add your full legal name and a valid physical postal address or PO box to the email footer. CAN-SPAM requires a real address.
 - [ ] Publish the privacy notice and name any form/email processors.
 - [ ] Decide the booking link (Calendly, Cal.com, or the form).
 - [ ] Confirm the starting prices and what is included.
 - [ ] Set up a payment method and invoice template.
-- [ ] Have counsel review the scope, limitation-of-liability, and privacy documents.
+- [ ] Consider counsel review for the scope, limitation-of-liability, and privacy documents.
 
 ## 2. Page
 
-- [ ] Replace the placeholder `contactEmail` in `docs/config.js`.
+- [ ] Confirm `contactEmail` in `docs/config.js` is a monitored inbox.
 - [ ] Set `bookingUrl` if you use a scheduler.
 - [ ] Replace the sample prices in `docs/index.html` with your real prices.
 - [ ] Test the form on desktop and mobile.
@@ -31,20 +31,20 @@ Use this before you send a single outreach email. The page can be live without e
 - [ ] Warm up the domain slowly. Start with 10–20 emails per day.
 - [ ] Use plain text, one primary link, and no attachments on first contact.
 - [ ] Keep a suppression list and honour opt-outs immediately.
-- [ ] Include the legal entity, postal address, privacy link, and opt-out in every email.
+- [ ] Include your full name, postal address, privacy link, and opt-out in every email.
 - [ ] Do not buy lists, scrape LinkedIn, or guess personal addresses.
 - [ ] Keep the public source URL for every lead.
 - [ ] Check the laws in your target country. This checklist is not legal advice.
 
 ## 4. First pipeline (week 1)
 
-- [ ] Pick one region and one segment (for example, Laravel agencies in the UK).
+- [ ] Pick one region and one segment (for example, US Laravel/WordPress agencies).
 - [ ] Build 20 agency/MSP leads with a public PHP signal.
 - [ ] Build 10 e-commerce/membership/SME leads with a public PHP signal.
 - [ ] Score each lead 1–5 using `lead-research.md`.
 - [ ] Find a role-based contact or public contact form.
 - [ ] Record the source URL and the exact public signal.
-- [ ] Send 10–20 personalised first-touch emails.
+- [ ] Send 5 personalised first-touch emails, check deliverability, then continue.
 - [ ] Follow up on day 4 and day 10, then stop.
 - [ ] Aim for 3–5 triage calls, not 100 replies.
 

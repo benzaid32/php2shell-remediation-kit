@@ -2,7 +2,7 @@
 
 These are B2B templates, not a licence to spam. Read `README.md` before sending.
 
-Replace every `{{placeholder}}`. Keep the first line specific to a real public signal. If you cannot fill `{{sourceUrl}}`, do not send the email.
+Replace every `{{placeholder}}`. If you are a sole operator with no legal entity, use your full legal name as `{{businessName}}`; do not invent a company. Keep the first line specific to a real public signal. If you cannot fill `{{sourceUrl}}`, do not send the email.
 
 ---
 

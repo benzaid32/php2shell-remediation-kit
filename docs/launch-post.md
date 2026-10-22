@@ -48,7 +48,7 @@ After patching, restart the web and PHP services. Confirm the **web SAPI** versi
 
 ### A free kit you can use today
 
-We published a free, MIT-licensed remediation kit with:
+I published a free, MIT-licensed remediation kit with:
 
 - a step-by-step checklist for sysadmins and MSPs;
 - a read-only local audit for Linux and Windows;

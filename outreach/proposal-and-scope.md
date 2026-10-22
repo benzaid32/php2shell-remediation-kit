@@ -1,6 +1,6 @@
 # Proposal and scope templates
 
-These are commercial templates, not legal advice. Have counsel review them for your jurisdiction, entity, and risk tolerance. Replace every bracket.
+These are commercial templates, not legal advice. Have counsel review them for your jurisdiction, business structure, and risk tolerance. Replace every bracket.
 
 ---
 
@@ -71,7 +71,7 @@ Travel and third-party fees are pre-approved in writing.
 - Confirm backups and a rollback plan before any restart or change.
 - Name an application owner for smoke tests and sign-off.
 - Provide a change window and notify affected teams.
-- Do not ask us to test systems outside the authorised scope.
+- Do not ask me to test systems outside the authorised scope.
 
 8. Assumptions
 

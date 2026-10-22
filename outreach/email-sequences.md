@@ -9,6 +9,7 @@ Replace every `{{placeholder}}`. Keep the first line specific to a real public s
 ## Rules
 
 - Plain text. No images, tracking pixels, or attachments on first contact.
+- Keep the commercial identification line, business name, postal address, and opt-out in the footer. Do not remove them to make the email look personal.
 - One primary link in the first email. The footer may include a privacy link.
 - 80–140 words. If it is longer, cut it.
 - No “you are vulnerable”, “urgent”, “final notice”, or fake “Re:”.
@@ -46,6 +47,7 @@ If it is useful, we also run independent verification for client hosts and produ
 No scanning. The kit runs only on hosts you own or administer.
 
 --
+This is a commercial solicitation from {{businessName}}.
 You received this because {{reason}} ({{sourceUrl}}). Reply "unsubscribe" to be removed.
 {{businessName}} · {{physicalAddress}} · {{privacyUrl}}
 ```
@@ -66,6 +68,7 @@ If you want, I can send the one-page scope for a white-label verification. It st
 {{pageUrl}}
 
 --
+This is a commercial solicitation from {{businessName}}.
 Reply "unsubscribe" to be removed. {{businessName}} · {{physicalAddress}} · {{privacyUrl}}
 ```
 
@@ -85,6 +88,7 @@ Reply "scope" and I'll send the one-page scope.
 {{pageUrl}}
 
 --
+This is a commercial solicitation from {{businessName}}.
 Reply "unsubscribe" to be removed. {{businessName}} · {{physicalAddress}} · {{privacyUrl}}
 ```
 
@@ -116,6 +120,7 @@ If you want a second pair of eyes, we offer a fixed-scope verification with an e
 No scanning. The kit runs only on hosts you own or administer.
 
 --
+This is a commercial solicitation from {{businessName}}.
 You received this because {{reason}} ({{sourceUrl}}). Reply "unsubscribe" to be removed.
 {{businessName}} · {{physicalAddress}} · {{privacyUrl}}
 ```
@@ -136,6 +141,7 @@ Happy to walk through it if that is useful.
 {{pageUrl}}
 
 --
+This is a commercial solicitation from {{businessName}}.
 Reply "unsubscribe" to be removed. {{businessName}} · {{physicalAddress}} · {{privacyUrl}}
 ```
 
@@ -155,6 +161,7 @@ Reply "scope" for the one-page scope.
 {{pageUrl}}
 
 --
+This is a commercial solicitation from {{businessName}}.
 Reply "unsubscribe" to be removed. {{businessName}} · {{physicalAddress}} · {{privacyUrl}}
 ```
 
@@ -178,6 +185,7 @@ Send the redacted summary (no credentials or customer data) and I'll tell you wh
 {{pageUrl}}
 
 --
+This is a commercial solicitation from {{businessName}}.
 Reply "unsubscribe" to be removed. {{businessName}} · {{physicalAddress}} · {{privacyUrl}}
 ```
 
